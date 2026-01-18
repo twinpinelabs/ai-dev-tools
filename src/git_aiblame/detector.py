@@ -35,3 +35,18 @@ class AIDetector:
     def is_ai_assisted(self, commit_message: str) -> bool:
         """Check if commit shows any AI assistance."""
         return self.detect(commit_message) is not None
+
+    def parse_commit_message(self, commit_message: str) -> dict:
+        """Parse commit message and extract AI attribution info.
+
+        Args:
+            commit_message: Full commit message
+
+        Returns:
+            Dict with 'ai_type' and 'is_ai' keys
+        """
+        ai_type = self.detect(commit_message)
+        return {
+            "ai_type": ai_type,
+            "is_ai": ai_type is not None,
+        }
