@@ -13,6 +13,52 @@ As AI coding assistants become standard in development workflows, teams need vis
 3. **Complements Source Trace** - Lightweight CLI companion to Twin Pine Labs' analytics product
 4. **Audit-friendly** - Useful for teams that need to understand AI contribution levels
 
+## Usage Examples
+
+### Basic Usage
+
+```bash
+# Show blame with AI attribution
+git-aiblame src/cli.py
+```
+
+Output:
+```
+   1 | abc123d | John Doe    | def hello():
+   2 | def456a | Jane Smith  |     return 'world'
+```
+
+### Line Ranges
+
+```bash
+# Check specific line range
+git-aiblame src/cli.py -L 10,50
+```
+
+### Plain Output
+
+```bash
+# Disable colored output
+git-aiblame src/cli.py --no-color
+```
+
+### Statistics
+
+```bash
+# Show summary statistics
+git-aiblame src/cli.py --stats
+```
+
+Output:
+```
+File: src/cli.py
+Total lines: 142
+Human: 98 (69%)
+AI-assisted: 44 (31%)
+  - Claude: 38 lines
+  - Copilot: 6 lines
+```
+
 ## License
 
 MIT
