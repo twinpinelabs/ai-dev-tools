@@ -13,6 +13,18 @@ As AI coding assistants become standard in development workflows, teams need vis
 3. **Complements Source Trace** - Lightweight CLI companion to Twin Pine Labs' analytics product
 4. **Audit-friendly** - Useful for teams that need to understand AI contribution levels
 
+## Installation
+
+```bash
+# Install from PyPI (when published)
+pip install git-aiblame
+
+# Or install from source
+git clone https://github.com/twinpinelabs/ai-dev-tools.git
+cd ai-dev-tools
+pip install -e .
+```
+
 ## Usage Examples
 
 ### Basic Usage
