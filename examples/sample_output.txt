@@ -1,0 +1,22 @@
+# Example Output
+
+## Basic blame output
+
+```
+   1 | abc123d | John Doe    | def main():
+   2 | abc123d | John Doe    |     """Entry point for the CLI"""
+   3 | def456a | Jane Smith  |     parser = argparse.ArgumentParser()
+   4 | def456a | Jane Smith  |     parser.add_argument("file", help="File to analyze")
+   5 | abc123d | John Doe    |     return parser.parse_args()
+```
+
+## Statistics output
+
+```
+File: src/cli.py
+Total lines: 142
+Human: 98 (69%)
+AI-assisted: 44 (31%)
+  - Claude: 38 lines
+  - Copilot: 6 lines
+```
